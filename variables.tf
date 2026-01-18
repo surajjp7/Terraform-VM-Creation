@@ -1,11 +1,11 @@
 variable "location" {
   type    = string
-  default = "westus2"
+  default = "westeurope"
 }
 
 variable "name" {
   type    = string
-  default = "rggroup3-jp"
+  default = "rggroup4-jp"
 }
 
 variable "address_space" {
@@ -15,7 +15,7 @@ variable "address_space" {
 
 variable "vnet_name" {
   type    = string
-  default = "rg_vnet3"
+  default = "rg_vnet4"
 }
 
 variable "address_prefixes" {
@@ -25,5 +25,5 @@ variable "address_prefixes" {
 
 variable "subnet" {
   type    = string
-  default = "rg_subnet2"
+  default = "rg_subnet3"
 }
