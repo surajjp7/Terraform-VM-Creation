@@ -65,7 +65,7 @@ resource "azurerm_linux_virtual_machine" "lin-vm" {
   name                = "linux-machine"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  size                = "Standard_B2ats_v2"
+  size                = "Standard_B2ts_v2"
   admin_username      = "azureuser"
   network_interface_ids = [
     azurerm_network_interface.nic.id,
