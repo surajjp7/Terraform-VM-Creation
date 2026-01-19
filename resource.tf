@@ -19,12 +19,12 @@ resource "azurerm_subnet" "subnet" {
 }
 
 resource "azurerm_network_security_group" "nsg" {
-  name                = "NSG_Group1"
+  name                = "NSG_Group2"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
   security_rule {
-    name                       = "test123"
+    name                       = "test12"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Allow"
@@ -37,14 +37,14 @@ resource "azurerm_network_security_group" "nsg" {
 }
 
 resource "azurerm_public_ip" "pip" {
-  name                = "TestPublicIp1"
+  name                = "TestPublicIp2"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   allocation_method   = "Static"
 }
 
 resource "azurerm_network_interface" "nic" {
-  name                = "test-nic"
+  name                = "test-nic1"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -62,7 +62,7 @@ resource "azurerm_network_interface_security_group_association" "nsg_nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "lin-vm" {
-  name                = "linux-machine"
+  name                = "linux-machine_1"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_B2ts_v2"
@@ -73,7 +73,7 @@ resource "azurerm_linux_virtual_machine" "lin-vm" {
 
   admin_ssh_key {
     username   = "azureuser"
-    public_key = file("/home/azureuser/.ssh/id_rsa.pub")
+    public_key = file("~/.ssh/id_rsa.pub")
   }
 
   os_disk {
