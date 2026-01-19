@@ -31,5 +31,5 @@ variable "subnet" {
 variable "ssh_public_key" {
   description = "Path to the SSH public key"
   type = string
-  default     = "~/.ssh/id_rsa.pub"
+  default     = "/home/azureuser/.ssh/id_rsa.pub"
 }
