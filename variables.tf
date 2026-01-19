@@ -27,3 +27,7 @@ variable "subnet" {
   type    = string
   default = "rg_subnet3"
 }
+
+variable "ssh_key_path" {
+  default = "~/.ssh/id_rsa.pub"
+}
