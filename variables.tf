@@ -29,5 +29,5 @@ variable "subnet" {
 }
 
 variable "ssh_key_path" {
-  default = trimspace(file(pathexpand("~/.ssh/id_rsa.pub")))
+  default = file(pathexpand("~/.ssh/id_rsa.pub"))
 }
