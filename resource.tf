@@ -62,7 +62,7 @@ resource "azurerm_network_interface_security_group_association" "nsg_nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "lin-vm" {
-  name                = "linux-machine_1"
+  name                = "linux-machine-1"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_B2ts_v2"
